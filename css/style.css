@@ -128,6 +128,12 @@ h6 {
           align-items: center;
 }
 
+.full-screen__navigation-head {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+}
+
 .full-screen__logo {
   font-size: 24px;
   font-weight: 700;
@@ -486,7 +492,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #fff;
+  background-color: #fafafa;
 }
 
 .scheme__row {
@@ -494,7 +500,6 @@ h6 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-  background-color: #fafafa;
 }
 
 .scheme__title {
@@ -568,6 +573,10 @@ h6 {
 .benefits__item-box:last-child {
   padding: 0px;
   margin: 0px 0px 139px 0px;
+}
+
+.benefits__img {
+  margin: 67px 0px -15px 0px;
 }
 
 .benefits__item {

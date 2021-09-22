@@ -110,6 +110,12 @@ h6 {
       align-items: center;
    }
 
+   &__navigation-head{
+      position: fixed;
+      top: 0;
+      z-index: 20;
+   }
+
    &__logo {
       font-size: 24px;
       font-weight: 700;
@@ -401,7 +407,7 @@ h6 {
       justify-content: center;
       align-items: center;
       text-align: center;
-      background-color: #fff;
+      background-color: #fafafa;
    }
 }
 
@@ -409,7 +415,6 @@ h6 {
    &__row {
       width: 1290px;
       flex: 0 1 auto;
-      background-color: #fafafa;
    }
 
    &__title {
@@ -475,6 +480,10 @@ h6 {
    &__item-box:last-child {
       padding: 0px;
       margin: 0px 0px 139px 0px;
+   }
+
+   &__img{
+      margin: 67px 0px -15px 0px;
    }
 
    &__item {
