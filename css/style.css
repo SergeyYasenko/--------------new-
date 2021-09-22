@@ -138,10 +138,9 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 0px 130px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0px 50px;
 }
 
 .full-screen__services {
@@ -299,7 +298,7 @@ h6 {
 }
 
 .main__body {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .main__conteiner {
@@ -421,7 +420,7 @@ h6 {
   line-height: 22px;
   color: #2b2213;
   text-align: center;
-  border: 0.5px solid #2A2213;
+  border: 0.5px solid #2a2213;
   background-color: #f3f3f3;
   border-radius: 7px;
   padding: 20px 28px;
@@ -470,7 +469,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .scheme__title {
@@ -594,15 +593,18 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 187px 315px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
-  background: url("../img/bg.png") center no-repeat;
+  background: url("../img/bg.png") 0 0/100% 100% no-repeat;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   width: 100%;
+  height: 650px;
 }
 
 .delivery {
@@ -656,7 +658,7 @@ h6 {
           flex: 0 1 auto;
   -webkit-backdrop-filter: blur(7px);
           backdrop-filter: blur(7px);
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   border-radius: 10px;
 }
 
@@ -683,7 +685,7 @@ h6 {
   line-height: 79px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #F89D13;
+  color: #f89d13;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -720,7 +722,7 @@ h6 {
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
-  color: #2B2213;
+  color: #2b2213;
   padding: 0px 0px 15px 0px;
 }
 
@@ -728,7 +730,7 @@ h6 {
   font-size: 48px;
   font-weight: 500;
   line-height: 59px;
-  color: #2B2213;
+  color: #2b2213;
   text-align: center;
   padding: 130px 0px 22px 0px;
 }
@@ -737,7 +739,7 @@ h6 {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
-  color: #2B2213;
+  color: #2b2213;
   text-align: center;
   padding: 0px 0px 47px 0px;
 }
@@ -774,8 +776,8 @@ h6 {
 /* Элемент точки */
 /*Конкретный слайдер*/
 .main__slider {
+  max-width: 100%;
   position: relative;
-  padding: 0px 100px;
 }
 
 .main__slider .slick-arrow {
@@ -817,28 +819,43 @@ h6 {
 }
 
 .main__slider .slick-dots li.slick-active button {
-  background-color: #F89D13;
+  background-color: #f89d13;
 }
 
 .main__slider .slick-dots button {
   font-size: 0;
   width: 10px;
   height: 10px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   border-radius: 50%;
 }
 
 .slider__item {
-  width: 1290px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0px 0px 0px 145px;
+}
+
+.slider__item .slick-slide.slick-active {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 0px 0px 100px;
+  margin: 0px 5px 0px 0px;
 }
 
 .slider__info {
@@ -849,7 +866,7 @@ h6 {
   font-size: 28px;
   font-weight: 500;
   line-height: 38px;
-  color: #2B2213;
+  color: #2b2213;
   padding: 0px 0px 10px 0px;
 }
 
@@ -857,7 +874,7 @@ h6 {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-  color: #2B2213;
+  color: #2b2213;
   margin: 0px 0px 4px 0px;
 }
 
@@ -865,6 +882,6 @@ h6 {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
-  color: #2B2213;
+  color: #2b2213;
   margin: 40px 0px 0px 0px;
 }
