@@ -101,7 +101,6 @@ h6 {
    &__body {
       background-color: rgba(0, 0, 0, 0.5);
       color: #000;
-      padding: 50px 15px;
       position: relative;
       z-index: 2;
       display: flex;
@@ -122,6 +121,7 @@ h6 {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 47px 0px 0px 0px;
    }
 
    &__row{
@@ -200,6 +200,7 @@ h6 {
    align-items: center;
    justify-content: center;
    text-align: center;
+   margin: 0px 0px 150px 0px;
 
    &__row {
       width: 465px;
@@ -726,9 +727,17 @@ h6 {
 /*Конкретный слайдер*/
 
 .main__slider {
+   max-width: 1290px;
+   position: relative;
+}
+
+.main__slick-slider{
    display: flex;
    flex-direction: column;
    align-items: center;
+}
+
+.main__slider slick-slider{
    position: relative;
 }
 
@@ -738,20 +747,19 @@ h6 {
 .main__slider .slick-arrow {
    position: absolute;
    top: 30%;
-   margin: 0% 5%;
-   z-index: 10;
+   z-index: 1;
    font-size: 0;
    width: 30px;
    height: 60px;
 }
 
 .main__slider .slick-arrow.slick-prev{
-   left: 0;
+   left: -50px;
    background: url('../img/icons/prev.svg') 0 0 / 100% no-repeat;
 }
 
 .main__slider .slick-arrow.slick-next{
-   right: 0;
+   right: -50px;
    background: url('../img/icons/next.svg') 0 0 / 100% no-repeat;
 }
 
