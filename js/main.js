@@ -13,10 +13,10 @@ document.querySelectorAll('.transportation__title').forEach((item) =>
 
       document.querySelectorAll('.transportation__title').forEach((child) => child.classList.remove('transportation__title--active'));
 
-      document.querySelectorAll('.card-block__row').forEach((child) => child.classList.remove('card-block__row--active'));
+      document.querySelectorAll('.main__card-block').forEach((child) => child.classList.remove('main__card-block--active'));
 
       item.classList.add('transportation__title--active');
-      document.getElementById(id).classList.add('card-block__row--active');
+      document.getElementById(id).classList.add('main__card-block--active');
 
    })
 );
