@@ -120,8 +120,8 @@ h6 {
       min-width: 1290px;
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      padding: 0px 50px;
+      justify-content: space-evenly;
+      padding: 0px 130px;
    }
 
    &__services {
@@ -537,6 +537,7 @@ h6 {
    }
 
    &__delivery {
+      padding: 0px 0px 0px 80px;
    }
 }
 
@@ -761,9 +762,9 @@ h6 {
 
 .slider__item {
    display: flex;
-   justify-content: flex-start;
+   justify-content: center;
    align-items: center;
-   padding: 0px 0px 0px 145px;
+   padding: 0px 185px 0px 0px;
 }
 
 .slider__item .slick-slide.slick-active {

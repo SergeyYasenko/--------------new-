@@ -138,9 +138,10 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 0px 50px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0px 130px;
 }
 
 .full-screen__services {
@@ -607,6 +608,10 @@ h6 {
   height: 650px;
 }
 
+.stock__delivery {
+  padding: 0px 0px 0px 80px;
+}
+
 .delivery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -834,13 +839,13 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 0px 0px 145px;
+  padding: 0px 185px 0px 0px;
 }
 
 .slider__item .slick-slide.slick-active {
