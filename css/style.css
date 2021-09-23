@@ -1031,3 +1031,7 @@ h6 {
   color: #2b2213;
   opacity: 0.8;
 }
+
+.accordion-right__block-text .accordion-left__block-text {
+  display: none;
+}
