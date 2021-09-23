@@ -880,7 +880,7 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0px 0px 144px 0px;
+  padding: 43px 0px 144px 0px;
 }
 
 .main__slider .slick-dots li {
@@ -949,16 +949,9 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .questions__title {
@@ -967,20 +960,27 @@ h6 {
   line-height: 59px;
   color: #2b2213;
   text-align: center;
+  padding: 100px 0px 79px 0px;
 }
 
 .accordion-left__block-title {
   width: 630px;
   border: 1px solid #adadad;
   border-radius: 7px;
-  padding: 28px 0px 28px 30px;
+  padding: 28px 45px 28px 30px;
+  margin: 0px 30px 0px 0px;
 }
 
 .accordion-left__block-text {
-  padding: 23px 0px 23px 30px;
   width: 630px;
   border: 1px solid #adadad;
   border-radius: 7px;
+  padding: 23px 30px 23px 30px;
+  margin: 0px 0px 30px 0px;
+}
+
+.accordion-left__block-text:last-child {
+  margin: 0px 0px 100px 0px;
 }
 
 .accordion-left__title {
@@ -991,6 +991,40 @@ h6 {
 }
 
 .accordion-left__text {
+  font-size: 16;
+  font-weight: 400;
+  line-height: 22px;
+  color: #2b2213;
+  opacity: 0.8;
+}
+
+.accordion-right__block-title {
+  width: 630px;
+  border: 1px solid #adadad;
+  border-radius: 7px;
+  padding: 28px 45px 28px 30px;
+}
+
+.accordion-right__block-text {
+  width: 630px;
+  border: 1px solid #adadad;
+  border-radius: 7px;
+  padding: 23px 30px 23px 30px;
+  margin: 0px 0px 30px 0px;
+}
+
+.accordion-right__block-text:last-child {
+  margin: 0px 0px 100px 0px;
+}
+
+.accordion-right__title {
+  font-size: 18;
+  font-weight: 500;
+  line-height: 24px;
+  color: #2b2213;
+}
+
+.accordion-right__text {
   font-size: 16;
   font-weight: 400;
   line-height: 22px;
