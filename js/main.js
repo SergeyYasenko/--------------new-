@@ -74,3 +74,10 @@ $(document).ready(function(){
       waitForAnimate:false,
    });
 });
+
+
+$(document).ready(function() {
+   $('.accordion-right__block-title').click(function(_event) {
+      $(this).toggleClass('active').next().slideToggle(300);
+   });
+});

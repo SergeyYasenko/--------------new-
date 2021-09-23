@@ -866,7 +866,7 @@ h6 {
       border: 1px solid #adadad;
       border-radius: 7px;
       padding: 28px 45px 28px 30px;
-      margin: 0px 30px 0px 0px;
+      margin: 0px 30px 30px 0px;
    }
 
    &__block-text{
@@ -903,6 +903,9 @@ h6 {
       border: 1px solid #adadad;
       border-radius: 7px;
       padding: 28px 45px 28px 30px;
+      margin: 0px 0px 30px 0px;
+      position: relative;
+      cursor: pointer;
    }
 
    &__block-text{
@@ -924,6 +927,40 @@ h6 {
       color: #2b2213;
    }
 
+   &__block-title:before,
+   &__block-title:after {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background-color:#F89D13;
+      position: absolute;
+      top: 40px;
+      right: 25px;
+      transition: all 0.3s ease 0s;
+   }
+
+   &__block-title:before{
+      transform: rotate(180deg);
+      right: 25px;
+   }
+
+   &__block-title:after{
+      transform: rotate(90deg);
+      right: 25px;
+   }
+
+   &__block-title.active{
+      margin: 0;
+   }
+
+   &__block-title.active:before{
+      transform: rotate(120deg);
+   }
+
+   &__block-title.active:after {
+      transform: rotate(65deg);
+   }
+
    &__text {
       font-size: 16;
       font-weight: 400;
@@ -933,6 +970,10 @@ h6 {
    }
 }
 
-.accordion-right__block-text .accordion-left__block-text {
+.accordion-left__block-text{
+   display: none
+}
+
+.accordion-right__block-text {
    display: none;
 }
