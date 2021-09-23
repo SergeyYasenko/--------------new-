@@ -1,4 +1,12 @@
-var element = document.getElementById('phone');
+var element = document.querySelector('.tel');
+var maskOptions = {
+   mask: '+7 (000) 000-00-00',
+   lazy: true,
+};
+
+var mask = new IMask(element, maskOptions);
+
+var element = document.querySelector('.feedback__tel');
 var maskOptions = {
    mask: '+7 (000) 000-00-00',
    lazy: true,
@@ -78,6 +86,20 @@ $(document).ready(function(){
 
 $(document).ready(function() {
    $('.accordion-right__block-title').click(function(_event) {
+      if($('.questions__accordion-right').hasClass('one')){
+         $('.accordion-right__block-title').not($(this)).removeClass('active');
+         $('.accordion-right__block-text').not($(this).next()).slideUp(300);
+      }
+      $(this).toggleClass('active').next().slideToggle(300);
+   });
+});
+
+$(document).ready(function() {
+   $('.accordion-left__block-title').click(function(_event) {
+      if($('.questions__accordion-left').hasClass('one')){
+         $('.accordion-left__block-title').not($(this)).removeClass('active');
+         $('.accordion-left__block-text').not($(this).next()).slideUp(300);
+      }
       $(this).toggleClass('active').next().slideToggle(300);
    });
 });
