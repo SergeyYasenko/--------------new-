@@ -201,6 +201,14 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   margin: 0px 30px 0px 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.full-screen__nav:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .full-screen__nav:last-child {
@@ -398,7 +406,7 @@ h6 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 150px 0px 22px 0px;
+  padding: 160px 0px 26px 0px;
 }
 
 .content__text {
@@ -412,7 +420,7 @@ h6 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 0px 0px 36px 0px;
+  padding: 0px 0px 72px 0px;
   margin: 0 auto;
 }
 
@@ -460,12 +468,14 @@ h6 {
 }
 
 .card-block__card {
-  width: 410px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 410px;
+          flex: 1 1 410px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
   border-radius: 5px;
-  margin: 0px 30px 150px 0px;
+  margin: 0px 30px 100px 0px;
 }
 
 .card-block__card:last-child {
@@ -510,7 +520,19 @@ h6 {
   border: 0.5px solid #2a2213;
   background-color: #f3f3f3;
   padding: 39px 40px;
+  margin: 0px 0px 50px 0.4px;
+}
+
+.transportation__title:first-child {
   margin: 0px 0px 50px 0px;
+}
+
+.transportation__title-1 {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.transportation__title-3 {
+  border-radius: 0px 5px 5px 0px;
 }
 
 .transportation__title--active {
@@ -555,7 +577,7 @@ h6 {
   font-weight: 700;
   line-height: 59px;
   color: #f89d13;
-  padding: 142px 0px 22px 0px;
+  padding: 150px 0px 22px 0px;
 }
 
 .scheme__text {
@@ -565,7 +587,7 @@ h6 {
   color: #000;
   opacity: 0.6;
   text-align: center;
-  padding: 0px 0px 36px 0px;
+  padding: 0px 0px 150px 0px;
 }
 
 .main__benefits {
@@ -579,6 +601,7 @@ h6 {
 }
 
 .benefits__row {
+  max-width: 1290px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
@@ -591,6 +614,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 67px 0px 0px 0px;
 }
 
 .benefits__content {
@@ -598,7 +622,7 @@ h6 {
 }
 
 .benefits__title {
-  padding: 123px 0px 24px 0px;
+  padding: 100px 0px 24px 0px;
   font-size: 48px;
   font-weight: 500;
   line-height: 59px;
@@ -610,7 +634,6 @@ h6 {
   font-weight: 400;
   line-height: 32px;
   color: #2b2213;
-  padding: 0px 0px 59px 0px;
 }
 
 .benefits__item-box {
@@ -623,10 +646,6 @@ h6 {
 .benefits__item-box:last-child {
   padding: 0px;
   margin: 0px 0px 139px 0px;
-}
-
-.benefits__img {
-  margin: 67px 0px -15px 0px;
 }
 
 .benefits__item {
@@ -828,7 +847,7 @@ h6 {
   line-height: 59px;
   color: #2b2213;
   text-align: center;
-  padding: 130px 0px 22px 0px;
+  padding: 150px 0px 22px 0px;
 }
 
 .slider__text {
@@ -881,6 +900,10 @@ h6 {
 /* Активная точка */
 /* Элемент точки */
 /*Конкретный слайдер*/
+.main__content-slider {
+  background-color: #fff;
+}
+
 .main__slider {
   position: relative;
 }
@@ -934,7 +957,7 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 43px 0px 144px 0px;
+  padding: 43px 0px 100px 0px;
 }
 
 .main__slider .slick-dots li {
@@ -1027,6 +1050,8 @@ h6 {
   margin: 0px 30px 30px 0px;
   position: relative;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .accordion-left__block-title:last-child {
@@ -1059,22 +1084,25 @@ h6 {
 
 .accordion-left__block-title.active {
   margin: 0;
+  border-radius: 7px 7px 0px 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .accordion-left__block-title.active:before {
-  -webkit-transform: rotate(120deg);
-          transform: rotate(120deg);
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
 }
 
 .accordion-left__block-title.active:after {
-  -webkit-transform: rotate(65deg);
-          transform: rotate(65deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .accordion-left__block-text {
   width: 630px;
   border: 1px solid #adadad;
-  border-radius: 7px;
+  border-radius: 0px 0px 7px 7px;
   padding: 23px 30px 23px 30px;
   margin: 0px 0px 30px 0px;
 }
@@ -1101,11 +1129,13 @@ h6 {
 .accordion-right__block-title {
   width: 630px;
   border: 1px solid #adadad;
-  border-radius: 7px;
+  border-radius: 7px 7px 7px 7px;
   padding: 28px 45px 28px 30px;
   margin: 0px 0px 30px 0px;
   position: relative;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .accordion-right__block-title:last-child {
@@ -1115,7 +1145,7 @@ h6 {
 .accordion-right__block-text {
   width: 630px;
   border: 1px solid #adadad;
-  border-radius: 7px;
+  border-radius: 0px 0px 7px 7px;
   padding: 23px 30px 23px 30px;
   margin: 0px 0px 30px 0px;
 }
@@ -1157,16 +1187,19 @@ h6 {
 
 .accordion-right__block-title.active {
   margin: 0;
+  border-radius: 7px 7px 0px 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .accordion-right__block-title.active:before {
-  -webkit-transform: rotate(120deg);
-          transform: rotate(120deg);
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
 }
 
 .accordion-right__block-title.active:after {
-  -webkit-transform: rotate(65deg);
-          transform: rotate(65deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .accordion-right__text {
@@ -1296,14 +1329,6 @@ h6 {
 
 .footer__logo {
   color: #2B2213;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.footer__logo:hover {
-  color: #f89d13;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .footer__contacts {
@@ -1314,6 +1339,9 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .footer__info {
@@ -1381,6 +1409,7 @@ h6 {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
+  margin: 0;
 }
 
 .footer__nav {
@@ -1393,6 +1422,14 @@ h6 {
   display: flex;
   margin: 0px 30px 0px 0px;
   display: flex;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer__nav:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer__txt {
@@ -1401,11 +1438,11 @@ h6 {
   line-height: 22px;
   color: #2B2213;
   opacity: 0.9;
-  padding: 0px 85px 0px 0px;
+  padding: 0px 100px 0px 0px;
 }
 
 .footer__txt:last-child {
-  margin: 0;
+  padding: 0;
 }
 
 .address {

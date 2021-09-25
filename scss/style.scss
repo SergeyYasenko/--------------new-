@@ -168,6 +168,12 @@ h6 {
    color: #2A2213;
    display: flex;
    margin: 0px 30px 0px 0px;
+   transition: all 0.3s ease;
+   }
+
+   &__nav:hover{
+      opacity: 0.8;
+      transition: all 0.3s ease;
    }
 
    &__nav:last-child {
@@ -331,7 +337,7 @@ h6 {
       color: #f89d13;
       text-transform: uppercase;
       flex: 1 1 auto;
-      padding: 150px 0px 22px 0px;
+      padding: 160px 0px 26px 0px;
    }
 
    &__text {
@@ -343,7 +349,7 @@ h6 {
       opacity: 0.7;
       color: #000;
       flex: 1 1 auto;
-      padding: 0px 0px 36px 0px;
+      padding: 0px 0px 72px 0px;
       margin: 0 auto;
    }
 
@@ -373,11 +379,11 @@ h6 {
    display: flex;
 
    &__card {
-      width: 410px;
+      flex: 1 1 410px;
       background-color: #ffffff;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
       border-radius: 5px;
-      margin: 0px 30px 150px 0px;
+      margin: 0px 30px 100px 0px;
    }
 
    &__card:last-child {
@@ -424,8 +430,23 @@ h6 {
       border: 0.5px solid #2a2213;
       background-color: #f3f3f3;
       padding: 39px 40px;
+      margin: 0px 0px 50px 0.4px;
+   }
+   &__title:first-child{
       margin: 0px 0px 50px 0px;
    }
+
+   &__title-1{
+      border-radius: 5px 0px 0px 5px;
+   }
+
+   &__title-2{
+   }
+
+   &__title-3{
+      border-radius: 0px 5px 5px 0px;
+   }
+
 }
 
 .transportation__title--active {
@@ -460,7 +481,7 @@ h6 {
       font-weight: 700;
       line-height: 59px;
       color: #f89d13;
-      padding: 142px 0px 22px 0px;
+      padding: 150px 0px 22px 0px;
    }
 
    &__text {
@@ -470,7 +491,7 @@ h6 {
       color: #000;
       opacity: 0.6;
       text-align: center;
-      padding: 0px 0px 36px 0px;
+      padding: 0px 0px 150px 0px;
    }
 }
 
@@ -484,10 +505,12 @@ h6 {
 
 .benefits {
    &__row {
+      max-width: 1290px;
       flex: 1 1 50%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 67px 0px 0px 0px;
    }
 
    &__content {
@@ -495,7 +518,7 @@ h6 {
    }
 
    &__title {
-      padding: 123px 0px 24px 0px;
+      padding: 100px 0px 24px 0px;
       font-size: 48px;
       font-weight: 500;
       line-height: 59px;
@@ -507,7 +530,7 @@ h6 {
       font-weight: 400;
       line-height: 32px;
       color: #2b2213;
-      padding: 0px 0px 59px 0px;
+
    }
 
    &__item-box {
@@ -521,7 +544,7 @@ h6 {
    }
 
    &__img {
-      margin: 67px 0px -15px 0px;
+
    }
 
    &__item {
@@ -698,7 +721,7 @@ h6 {
       line-height: 59px;
       color: #2b2213;
       text-align: center;
-      padding: 130px 0px 22px 0px;
+      padding: 150px 0px 22px 0px;
    }
 
    &__text {
@@ -774,6 +797,10 @@ h6 {
 
 /*Конкретный слайдер*/
 
+.main__content-slider {
+   background-color:#fff;
+}
+
 .main__slider {
    position: relative;
 }
@@ -815,7 +842,7 @@ h6 {
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 43px 0px 144px 0px;
+   padding: 43px 0px 100px 0px;
 }
 
 .main__slider .slick-dots li {
@@ -910,6 +937,7 @@ h6 {
       margin: 0px 30px 30px 0px;
       position: relative;
       cursor: pointer;
+      transition: all 0.3s ease;
    }
 
    &__block-title:last-child {
@@ -940,20 +968,23 @@ h6 {
 
    &__block-title.active {
       margin: 0;
+      border-radius: 7px 7px 0px 0px;
+      transition: all 0.3s ease;
+
    }
 
    &__block-title.active:before {
-      transform: rotate(120deg);
+      transform: rotate(130deg);
    }
 
    &__block-title.active:after {
-      transform: rotate(65deg);
+      transform: rotate(45deg);
    }
 
    &__block-text {
       width: 630px;
       border: 1px solid #adadad;
-      border-radius: 7px;
+      border-radius: 0px 0px 7px 7px;
       padding: 23px 30px 23px 30px;
       margin: 0px 0px 30px 0px;
    }
@@ -982,11 +1013,12 @@ h6 {
    &__block-title {
       width: 630px;
       border: 1px solid #adadad;
-      border-radius: 7px;
+      border-radius: 7px 7px 7px 7px;
       padding: 28px 45px 28px 30px;
       margin: 0px 0px 30px 0px;
       position: relative;
       cursor: pointer;
+      transition: all 0.3s ease;
    }
 
    &__block-title:last-child {
@@ -996,7 +1028,7 @@ h6 {
    &__block-text {
       width: 630px;
       border: 1px solid #adadad;
-      border-radius: 7px;
+      border-radius: 0px 0px 7px 7px;
       padding: 23px 30px 23px 30px;
       margin: 0px 0px 30px 0px;
    }
@@ -1036,14 +1068,16 @@ h6 {
 
    &__block-title.active {
       margin: 0;
+      border-radius: 7px 7px 0px 0px;
+      transition: all 0.3s ease;
    }
 
    &__block-title.active:before {
-      transform: rotate(120deg);
+      transform: rotate(130deg);
    }
 
    &__block-title.active:after {
-      transform: rotate(65deg);
+      transform: rotate(45deg);
    }
 
    &__text {
@@ -1151,17 +1185,12 @@ h6 {
 
    &__logo {
       color: #2B2213;
-      transition: all 0.3s ease;
-   }
-
-   &__logo:hover{
-      color:#f89d13;
-      transition: all 0.3s ease;
    }
 
    &__contacts {
       display: flex;
       flex-direction: column;
+      align-items: flex-start
    }
 
    &__info {
@@ -1225,6 +1254,7 @@ h6 {
       font-weight: 700;
       font-size: 24px;
       line-height: 32px;
+      margin: 0;
    }
 
    &__nav {
@@ -1234,7 +1264,13 @@ h6 {
    color: #2A2213;
    display: flex;
    margin: 0px 30px 0px 0px;
-      display: flex;
+   display: flex;
+   transition: all 0.3s ease;
+   }
+
+   &__nav:hover{
+      opacity: 0.8;
+      transition: all 0.3s ease;
    }
 
    &__txt{
@@ -1243,10 +1279,10 @@ h6 {
       line-height: 22px;
       color: #2B2213;
       opacity: 0.9;
-      padding: 0px 85px 0px 0px;
+      padding: 0px 100px 0px 0px;
    }
    &__txt:last-child{
-      margin: 0;
+      padding: 0;
    }
 }
 
