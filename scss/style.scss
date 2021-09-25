@@ -278,7 +278,7 @@ h6 {
       line-height: 22px;
       text-align: center;
       padding: 0px 0px 31px 0px;
-      text-transform: lowercase;
+      text-transform: none;
       color: #fff;
    }
 
@@ -289,7 +289,7 @@ h6 {
       line-height: 15px;
       color: #eaeaea;
       text-align: center;
-      text-transform: lowercase;
+      text-transform: none;
    }
 }
 
@@ -340,7 +340,7 @@ h6 {
       font-weight: 700;
       line-height: 59px;
       text-align: center;
-      color: #f89d13;
+      color: #2B2213;
       text-transform: uppercase;
       flex: 1 1 auto;
       padding: 160px 0px 26px 0px;
@@ -389,11 +389,11 @@ h6 {
       background-color: #ffffff;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
       border-radius: 5px;
-      margin: 0px 30px 150px 0px;
+      margin: 0px 30px 120px 0px;
    }
 
    &__card:last-child {
-      margin: 0px 0px 150px 0px;
+      margin: 0px 0px 120px 0px;
    }
 
    &__info {
@@ -497,7 +497,7 @@ h6 {
       font-size: 48px;
       font-weight: 700;
       line-height: 59px;
-      color: #f89d13;
+      color: #2B2213;
       padding: 150px 0px 22px 0px;
    }
 
@@ -748,7 +748,7 @@ h6 {
       line-height: 32px;
       color: #2b2213;
       text-align: center;
-      padding: 0px 0px 47px 0px;
+      padding: 0px 0px 87px 0px;
    }
 }
 
