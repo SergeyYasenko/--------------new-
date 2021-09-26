@@ -4,12 +4,12 @@
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link rel="stylesheet" href="css/style.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-   <title>Document</title>
+   <title>РусКаргоТранс</title>
 </head>
 
 <body>
@@ -20,10 +20,12 @@
                <nav class="full-screen__navigation">
                   <div class="full-screen__row">
                      <a data-goto=".full-screen__body" href="#" class="full-screen__logo logo nav">РусКаргоТранс</a>
-                     <div class="full-screen__info">
-                        <div class="full-screen__icon">
+                     <div class="full-screen__menu">
+                        <div class="menu__icon">
                            <span></span>
                         </div>
+                     </div>
+                     <nav class="full-screen__info">
                         <ul class="full-screen__services services">
                            <li>
                               <a data-goto=".content" href="#" class="full-screen__nav nav">Услуги</a>
@@ -35,7 +37,7 @@
                               <a data-goto=".feedback__row" href="#" class="full-screen__nav nav">Контакты</a>
                            </li>
                         </ul>
-                     </div>
+                     </nav>
                      <div class="full-screen__bell">
                         <a data-goto=".feedback__row" href="#" class="full-screen__tel-button nav">Обратный звонок</a>
                         <span><a href="tel+78005232432" class="full-screen__tel phone">8 (800) 523-24-32</a></span>
@@ -127,7 +129,7 @@
                                        во
                                        время
                                        перевозки</h2>
-                                    <a href="#" class="card-block__detail">Подробнее</a>
+                                    <button class="card-block__btn btn">Заказать</button>
                                  </div>
                               </div>
                               <div class="card-block__card">
@@ -137,7 +139,7 @@
                                     <h2 class="card-block__text">Безопасноя транспортировка крупных партий товаров на
                                        любые
                                        расстояния</h2>
-                                    <a href="#" class="card-block__detail">Подробнее</a>
+                                    <button class="card-block__btn btn">Заказать</button>
                                  </div>
                               </div>
                               <div class="card-block__card">
@@ -146,7 +148,7 @@
                                     <h1 class="card-block__title">Грузоперевозка сыпучих грузов</h1>
                                     <h2 class="card-block__text">Перевозка автоцистернами сахара, зерна, пластика
                                     </h2>
-                                    <a href="#" class="card-block__detail">Подробнее</a>
+                                    <button class="card-block__btn btn">Заказать</button>
                                  </div>
                               </div>
                            </div>
@@ -162,7 +164,7 @@
                                     <h2 class="card-block__text">Перевозка комбайнов, экскаваторов, автокранов,
                                        бульдозеров,
                                        катков, тракторов</h2>
-                                    <a href="#" class="card-block__detail">Подробнее</a>
+                                    <button class="card-block__btn btn">Заказать</button>
                                  </div>
                               </div>
                               <div class="card-block__card">
@@ -171,7 +173,7 @@
                                     <h1 class="card-block__title">Перевозка конструкций</h1>
                                     <h2 class="card-block__text">Перевозка крупногабаритных металлических, бетонных
                                        конструкций</h2>
-                                    <a href="#" class="card-block__detail">Подробнее</a>
+                                    <button class="card-block__btn btn">Заказать</button>
                                  </div>
                               </div>
                               <div class="card-block__card">
@@ -181,7 +183,7 @@
                                     <h2 class="card-block__text">Перевозка промышленного, производственного
                                        оборудования
                                        и станков, асфальтобетонных заводов (АБЗ)</h2>
-                                    <a href="#" class="card-block__detail">Подробнее</a>
+                                    <button class="card-block__btn btn">Заказать</button>
                                  </div>
                               </div>
                            </div>
@@ -216,7 +218,9 @@
                         </h2>
                      </div>
                   </div>
-                  <div class="benefit__img"><img src="img/benefit.png" alt="benefit.png"></div>
+                  <div class="benefit__img">
+                     <img src="img/benefit.png" alt="benefit.png" class="benefit__image">
+                  </div>
                </div>
             </div>
             <div class="container">
@@ -545,7 +549,7 @@
                         <button class="feedback__btn btn">Заказать звонок</button>
                      </div>
                      <div class="feedback__img">
-                        <img src="img/feedback.png" alt="feedback.png">
+                        <img src="img/feedback.png" alt="feedback.png" class="feedback__image">
                      </div>
                   </div>
                </div>
@@ -574,9 +578,9 @@
                   </ul>
                </div>
                <div class="footer__logo-image">
-                  <img class="logo-image__img-1" src="img/icons/vk-hover.svg" alt="vk-hover.svg">
-                  <img class="logo-image__img-2" src="img/icons/inst-hover.svg" alt="inst-hover.svg">
-                  <img class="logo-image__img-3" src="img/icons/face-hover.svg" alt="face-hover.svg">
+                  <img class="logo-image__img-1 footer__img" src="img/icons/vk-hover.svg" alt="vk-hover.svg">
+                  <img class="logo-image__img-2 footer__img" src="img/icons/inst-hover.svg" alt="inst-hover.svg">
+                  <img class="logo-image__img-3 footer__img" src="img/icons/face-hover.svg" alt="face-hover.svg">
                </div>
             </div>
             <div class="footer__line"></div>
