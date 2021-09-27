@@ -80,6 +80,7 @@ $(document).ready(function(){
       autoplay:false,
       autoplaySpeed:5000,
       waitForAnimate:false,
+      touchThreshold: 12,
    });
 });
 
