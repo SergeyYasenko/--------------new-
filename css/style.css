@@ -2351,8 +2351,17 @@ h6 {
     top: 22px;
     right: 20px;
   }
+  .full-screen__info {
+    display: none;
+  }
+  .full-screen__info._active {
+    display: block;
+  }
   .burger-line {
     background-color: #fff;
+  }
+  .burger-line._active {
+    background-color: #2B2213;
   }
   .full-screen__logo {
     width: 100%;
