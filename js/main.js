@@ -127,10 +127,12 @@ if(menuLinks.length > 0) {
 
 const iconMenu = document.querySelector('.burger');
 if (iconMenu) {
+   const fullScreenInfoRow = document.querySelector('.full-screen__info-row');
    const fullScreenInfo = document.querySelector('.full-screen__info');
    iconMenu.addEventListener("click", function (e) {
       document.body.classList.toggle('_lock');
       iconMenu.classList.toggle('_active');
+      fullScreenInfoRow.classList.toggle('_active');
       fullScreenInfo.classList.toggle('_active');
    });
 }

@@ -19,7 +19,11 @@
             <div class="full-screen__navigation-head">
                <nav class="full-screen__navigation">
                   <div class="full-screen__row">
-                     <a data-goto=".full-screen__body" href="#" class="full-screen__logo logo nav">РусКаргоТранс</a>
+                     <ul>
+                        <li>
+                           <a data-goto=".full-screen__body" href="#" class="full-screen__logo logo nav">РусКаргоТранс</a>
+                        </li>
+                     </ul>
                      <div class="full-screen__menu">
                         <div class="menu__icon">
                            <button type="button" class="burger">
@@ -29,19 +33,34 @@
                            </button>
                         </div>
                      </div>
-                     <nav class="full-screen__info">
-                        <ul class="full-screen__services services">
-                           <li>
-                              <a data-goto=".content" href="#" class="full-screen__nav nav">Услуги</a>
-                           </li>
-                           <li>
-                              <a data-goto=".benefits__row" href="#" class="full-screen__nav nav">О компании</a>
-                           </li>
-                           <li>
-                              <a data-goto=".feedback__row" href="#" class="full-screen__nav nav">Контакты</a>
-                           </li>
-                        </ul>
-                     </nav>
+                     <div class="full-screen__info-row">
+                        <nav class="full-screen__info">
+                           <ul class="full-screen__services services">
+                              <li>
+                                 <a data-goto=".full-screen__body" href="#" class="full-screen__nav-log logo nav">РусКаргоТранс</a>
+                              </li>
+                              <li>
+                                 <a data-goto=".content" href="#" class="full-screen__nav nav">Услуги</a>
+                              </li>
+                              <li>
+                                 <a data-goto=".benefits__row" href="#" class="full-screen__nav nav">О компании</a>
+                              </li>
+                              <li>
+                                 <a data-goto=".feedback__row" href="#" class="full-screen__nav nav">Контакты</a>
+                              </li>
+                           </ul>
+                           <div class="full-screen__nav-contacts">
+                              <span><a href="tel+78005232432" class="nav__tel phone">8 (800) 523-24-32</a></span>
+                              <span class="address">Москва, ул. Темерницкая, д38</span>
+                           </div>
+                           <p class="nav__txt">©️2021 Все права защищены </p>
+                           <div class="nav__logo-image">
+                              <img class="logo-image__img-1 nav__img" src="img/icons/vk-hover.svg" alt="vk-hover.svg">
+                              <img class="logo-image__img-2 nav__img" src="img/icons/inst-hover.svg" alt="inst-hover.svg">
+                              <img class="logo-image__img-3 nav__img" src="img/icons/face-hover.svg" alt="face-hover.svg">
+                           </div>
+                        </nav>
+                     </div>
                      <div class="full-screen__bell">
                         <a data-goto=".feedback__row" href="#" class="full-screen__tel-button nav">Обратный звонок</a>
                         <span><a href="tel+78005232432" class="full-screen__tel phone">8 (800) 523-24-32</a></span>
@@ -237,19 +256,22 @@
                      <div class="sheme__block">
                         <div class="block__row">
                            <div class="block__container">
-                              <div class="container__img"><img class="container__image" src="img/icons/number_1.svg" alt="number_1.svg"></div>
+                              <div class="container__img"><img class="container__image" src="img/icons/number_1.svg"
+                                    alt="number_1.svg"></div>
                               <div class="container__title">Загрузка груза</div>
                               <div class="container__text">Обсуждаем детали, заключаем договор, <br> подаем транспорт
                                  для
                                  загрузки</div>
                            </div>
                            <div class="block__container">
-                              <div class="container__img"><img class="container__image" src="img/icons/number_2.svg" alt="number_2.svg"></div>
+                              <div class="container__img"><img class="container__image" src="img/icons/number_2.svg"
+                                    alt="number_2.svg"></div>
                               <div class="container__title">Доставка груза</div>
                               <div class="container__text">Информирование о местоположении <br> транспорта 24/7</div>
                            </div>
                            <div class="block__container">
-                              <div class="container__img"><img class="container__image" src="img/icons/number_3.svg" alt="number_3.svg"></div>
+                              <div class="container__img"><img class="container__image" src="img/icons/number_3.svg"
+                                    alt="number_3.svg"></div>
                               <div class="container__title">Отгрузка груза</div>
                               <div class="container__text">Отгрузка груза на место, <br> предоставление нами
                                  документов для
