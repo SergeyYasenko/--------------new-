@@ -2319,7 +2319,7 @@ h6 {
    }
 
    .menu__icon {
-      position: absolute;
+      position: revert;
       top: 22px;
       right: 20px;
    }
