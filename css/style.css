@@ -2499,6 +2499,12 @@ h6 {
   .card-block__card {
     width: 280px;
     margin: 0px 0px 40px 0px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .card-block__card:last-child {
+    margin: 0px 0px 40px 0px;
   }
   .main__card-block {
     -ms-flex-wrap: wrap;
@@ -2613,6 +2619,9 @@ h6 {
     padding: 12px 20px;
     margin: 0px 0px 97px 0px;
   }
+  .main__content-slider {
+    padding: 0px 0px 80px 0px;
+  }
   .main__slick-slider {
     width: 268px;
     margin: 0 auto;
@@ -2671,7 +2680,7 @@ h6 {
   .questions__title {
     font-size: 24px;
     line-height: 29px;
-    padding: 100px 0px 40px 0px;
+    padding: 60px 0px 40px 0px;
   }
   .questions__accordion-left {
     padding: 0;
