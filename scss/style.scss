@@ -273,10 +273,6 @@ h6 {
       color: #fff;
    }
 
-   &__tel{
-      width: 360px;
-   }
-
    &__text {
       width: 355px;
       font-size: 12px;
@@ -289,7 +285,7 @@ h6 {
 }
 
 .tel {
-   width: 342px;
+   width: 360px;
    height: 50px;
    background-color: #fafafa;
    border-radius: 3px;
@@ -1728,7 +1724,7 @@ h6 {
    }
 
    .full-screen__navigation-head {
-      width: 768px;
+      width: 100%;
    }
 
    .full-screen__bell{
