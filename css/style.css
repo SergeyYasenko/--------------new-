@@ -1480,6 +1480,7 @@ h6 {
   border: 0;
   background-color: transparent;
   width: 35px;
+  height: 25px;
   display: none;
 }
 
@@ -1823,8 +1824,15 @@ h6 {
     right: -150%;
     width: 100%;
     height: 100%;
-    padding: 100px 20px;
+    padding: 100px 100px;
     background-color: #fff;
+    -webkit-transition: right 0.6s ease;
+    transition: right 0.6s ease;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .full-screen__info-row {
     content: "";
@@ -1869,6 +1877,61 @@ h6 {
     text-align: center;
     padding: 0px 0px 15px 0px;
   }
+  .full-screen__services .full-screen__nav-log {
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 100px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #F89D13;
+    text-transform: none;
+  }
+  .burger._active {
+    right: 70px;
+  }
+  .nav__tel {
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 900;
+    color: #F89D13;
+    padding: 0px 0px 3px 0px;
+  }
+  .full-screen__nav-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 72px 0px 0px 0px;
+  }
+  .full-screen__nav-contacts .nav-address {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #2b2213;
+    opacity: 0.9;
+    padding: 0px 0px 40px 0px;
+  }
+  .nav__txt {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2B2213;
+    opacity: 0.8;
+    padding: 0px 0px 9px 0px;
+  }
+  .nav__logo-image {
+    display: block;
+  }
   .full-screen__tel-button {
     display: none;
   }
@@ -1899,7 +1962,7 @@ h6 {
     width: 768px;
   }
   .full-screen__bell {
-    z-index: 5;
+    z-index: 0;
   }
   .full-screen__tel {
     font-size: 30px;
@@ -2355,6 +2418,10 @@ h6 {
     top: 11px;
     right: 20px;
   }
+  .burger._active {
+    top: 33px;
+    right: 60px;
+  }
   .full-screen__info::after {
     display: none;
   }
@@ -2384,6 +2451,7 @@ h6 {
     width: 100%;
     height: 100%;
     padding: 100px 20px;
+    margin: 0px 79px;
     background-color: #fff;
   }
   .full-screen__info._active {
@@ -2416,6 +2484,11 @@ h6 {
     font-weight: 900;
     color: #F89D13;
     padding: 0px 0px 3px 0px;
+  }
+  .full-screen__nav-contacts .nav-address {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
   }
   .full-screen__nav-contacts {
     display: -webkit-box;
