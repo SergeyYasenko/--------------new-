@@ -1261,14 +1261,13 @@ h6 {
    }
 
    .burger._active{
-      position: fixed;
+      position: absolute   ;
       top: 33px;
       right: 60px;
    }
 
    .burger._active .burger-line:nth-child(1){
       transform: rotate(45deg);
-      background-color:#2B2213;
    }
 
    .burger._active .burger-line:nth-child(2){
@@ -1277,7 +1276,6 @@ h6 {
 
    .burger._active .burger-line:nth-child(3){
       transform: rotate(-45deg);
-      background-color:#2B2213;
    }
 
    .full-screen__nav-log{
