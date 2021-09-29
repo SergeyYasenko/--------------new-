@@ -1522,6 +1522,7 @@ h6 {
 .burger._active .burger-line:nth-child(1) {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  background-color: #2B2213;
 }
 
 .burger._active .burger-line:nth-child(2) {
@@ -1531,6 +1532,7 @@ h6 {
 .burger._active .burger-line:nth-child(3) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  background-color: #2B2213;
 }
 
 .full-screen__nav-log {
@@ -2417,11 +2419,8 @@ h6 {
     right: 20px;
   }
   .burger._active {
-    top: 33px;
-    right: 40px;
-  }
-  .full-screen__info::after {
-    display: none;
+    top: 11px;
+    right: 20px;
   }
   .full-screen__info-row {
     content: "";
@@ -2529,6 +2528,7 @@ h6 {
     right: 20px;
   }
   .burger-line {
+    display: block;
     background-color: #fff;
   }
   .full-screen__logo {
