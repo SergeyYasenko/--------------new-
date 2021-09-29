@@ -2127,6 +2127,11 @@ h6 {
       justify-content: flex-start;
    }
 
+   .burger {
+      top: 11px;
+      right: 20px;
+   }
+
    .full-screen__navigation {
       justify-content: space-between;
       position: relative;
@@ -2160,7 +2165,7 @@ h6 {
       font-size: 12px;
       line-height: 14px;
       color: #fff;
-      margin: 0px 0px 0px 20px;
+      padding: 0px 0px 0px 22px;
       order: 1;
    }
 
@@ -2546,6 +2551,7 @@ h6 {
       width: 280px;
       height: 45px;
       margin: 0px 0px 15px 0px;
+      padding: 14px 13px;
    }
 
    .feedback__btn {

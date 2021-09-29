@@ -2337,6 +2337,10 @@ h6 {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .burger {
+    top: 11px;
+    right: 20px;
+  }
   .full-screen__navigation {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -2368,7 +2372,7 @@ h6 {
     font-size: 12px;
     line-height: 14px;
     color: #fff;
-    margin: 0px 0px 0px 20px;
+    padding: 0px 0px 0px 22px;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -2702,6 +2706,7 @@ h6 {
     width: 280px;
     height: 45px;
     margin: 0px 0px 15px 0px;
+    padding: 14px 13px;
   }
   .feedback__btn {
     font-size: 16px;
