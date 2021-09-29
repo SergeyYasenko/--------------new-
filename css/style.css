@@ -2525,7 +2525,7 @@ h6 {
     position: relative;
   }
   .menu__icon {
-    position: revert;
+    position: initial;
     top: 22px;
     right: 20px;
   }
