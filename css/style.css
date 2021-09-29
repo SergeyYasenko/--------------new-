@@ -1532,6 +1532,22 @@ h6 {
           transform: rotate(-45deg);
 }
 
+.full-screen__nav-log {
+  display: none;
+}
+
+.full-screen__nav-contacts {
+  display: none;
+}
+
+.nav__txt {
+  display: none;
+}
+
+.nav__logo-image {
+  display: none;
+}
+
 @media screen and (max-width: 1300px) {
   .container {
     width: 1140px;
