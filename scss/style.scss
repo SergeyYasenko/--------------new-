@@ -2319,7 +2319,8 @@ h6 {
    }
 
    .menu__icon {
-      position: initial;
+      display: block;
+      position: absolute;
       top: 22px;
       right: 20px;
    }
