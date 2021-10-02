@@ -4,80 +4,44 @@
     <meta charset="UTF-8">
 
 <?php
-require __DIR__ . '/vendor/autoload.php';
+$apiClient = new \AmoCRM\Client\AmoCRMApiClient($clientId, $clientSecret, $redirectUri);
+$apiClientFactory = new \AmoCRM\Client\AmoCRMApiClientFactory($oAuthConfig, $oAuthService);
+$apiClient = $apiClientFactory->make();
 
-if(isset($_POST['phone'])) {
+$apiClient->setAccessToken($accessToken)
+        ->setAccountBaseDomain($accessToken->getValues()['baseDomain'])
+        ->onAccessTokenRefresh(
+            function (\League\OAuth2\Client\Token\AccessTokenInterface $accessToken, string $baseDomain) {
+                saveToken(
+                    [
+                        'accessToken' => $accessToken->getToken(),
+                        'refreshToken' => $accessToken->getRefreshToken(),
+                        'expires' => $accessToken->getExpires(),
+                        'baseDomain' => $baseDomain,
+                    ]
+                );
+            });
 
-  try {
-    
-    // Создание клиента
-    $subdomain = 'stas7';            // Поддомен в амо срм
-    $login     = 'stas_7@mail.ru';            // Логин в амо срм
-    $apikey    = '';            // api ключ
+            $apiClient->getOAuthClient()->getOAuthButton(
+               [
+                   'title' => 'Установить интеграцию',
+                   'compact' => true,
+                   'class_name' => 'className',
+                   'color' => 'default',
+                   'error_callback' => 'handleOauthError',
+                   'state' => $state,
+               ]
+           );
 
+           $authorizationUrl = $apiClient->getOAuthClient()->getAuthorizeUrl([
+            'state' => $state,
+            'mode' => 'post_message', //post_message - редирект произойдет в открытом окне, popup - редирект произойдет в окне родителе
+        ]);
 
-    $amo = new \AmoCRM\Client($subdomain, $login, $apikey);
+header('Location: ' . $authorizationUrl);
 
-    // Вывести полученые из амо данные
-    // echo '<pre>';
-    // print_r($amo->account->apiCurrent());
-    // echo '</pre>';
+$accessToken = $apiClient->getOAuthClient()->getAccessTokenByCode($_GET['code']);
 
-    // создаем лида
-    $lead = $amo->lead;
-    $lead['name'] = $_POST['product_name'];
-    // $lead['responsible_user_id'] = 2462338; // ID ответсвенного 
-    // $lead['pipeline_id'] = 1207249; // ID воронки
-
-    // $lead->addCustomField(305117, [ // ID  поля в которое будт приходить заявки
-    //     [$_POST['city']], // сюда вписать значение из атрибута "name" пример: <input name="phone">
-    // ]);
-
-    $lead->addCustomField(595039, [
-        [$_POST['utm_source']],
-    ]);
-
-    $lead->addCustomField(595041, [
-        [$_POST['utm_medium']],
-    ]);
-
-    $lead->addCustomField(595043, [
-        [$_POST['utm_campaign']],
-    ]);
-
-    $lead->addCustomField(595045, [
-        [$_POST['utm_content']],
-    ]);
-
-    $lead->addCustomField(595047, [
-        [$_POST['utm_term']],
-    ]);
-
-    $id = $lead->apiAdd();
-
-    // Получение экземпляра модели для работы с контактами
-    $contact = $amo->contact;
-
-    // Заполнение полей модели
-    $contact['name'] = isset($_POST['name']) ? $_POST['name'] : 'Не указано';
-    $contact['linked_leads_id'] = [(int)$id];
-
-    $contact->addCustomField(305117, [
-      [$_POST['city']],
-    ]);
-
-    $contact->addCustomField(304033, [
-      [$_POST['email'], 'PRIV'],
-    ]);
-    // Добавление нового контакта и получение его ID
-    $id = $contact->apiAdd();
-
-
-  } catch (\AmoCRM\Exception $e) {
-      printf('Error (%d): %s' . PHP_EOL, $e->getCode(), $e->getMessage());
-  }
-
-}
 
 ?>
 

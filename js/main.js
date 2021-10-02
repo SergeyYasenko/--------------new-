@@ -167,24 +167,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let error = formValidate(form);
 
-      if (error === 0) {
-         allForm.classList.add('_sending');
-         let response = await fetch ('sendmail.php', {
-            method: 'POST',
-            body: formData
-         });
-         if (response.ok) {
-            let result = await response.json();
-            formPreview.innerHTML = '';
-            form.reset();
-            form.classList.remove('_sending');
-         }else{
-         alert('Ошибка');
-         form.classList.remove('_sending');
-         }
-      } else {
-         alert('Заполните обязательные поля');
-      }
    }
 
    function formValidate(form) {
