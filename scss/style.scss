@@ -41,7 +41,7 @@ body {
    -webkit-text-size-adjust: 100%;
 }
 
-body._lock{
+body._lock {
    overflow: hidden;
 }
 
@@ -1043,20 +1043,20 @@ h6 {
       position: relative;
    }
 
-   &__feedback::after{
-      content: '';
+   &__feedback::after {
+      content: "";
       position: absolute;
       top: 0;
-      left:0;
+      left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(51, 51, 51, 0.9) url('../img/icons/loading.webp') center / 50px no-repeat;
+      background: rgba(51, 51, 51, 0.9) url("../img/icons/loading.webp") center / 50px no-repeat;
       transition: all 0.3s ease;
       opacity: 0;
       visibility: hidden;
    }
 
-   &__feedback._sending::after{
+   &__feedback._sending::after {
       opacity: 1;
       visibility: visible;
    }
@@ -1102,14 +1102,13 @@ h6 {
 
    &__name._error {
       background-color: rgba(250, 25, 25, 0.04);
-      border: 0.5px solid #FF2323;
+      border: 0.5px solid #ff2323;
    }
 
-   &__tel._error{
+   &__tel._error {
       background-color: rgba(250, 25, 25, 0.04);
-      border: 0.5px solid #FF2323;
+      border: 0.5px solid #ff2323;
    }
-
 
    &__tel {
       width: 430px;
@@ -1256,15 +1255,15 @@ h6 {
    flex-direction: column;
    justify-content: center;
    padding: 0;
-   background-color:transparent;
+   background-color: transparent;
    border: 0;
-   width:35px;
+   width: 35px;
    height: 25px;
    display: none;
 }
 
-.burger:hover{
-   cursor:pointer;
+.burger:hover {
+   cursor: pointer;
 }
 
 .burger:focus {
@@ -1275,7 +1274,7 @@ h6 {
    position: relative;
    width: 100%;
    height: 5px;
-   background-color:#2B2213;
+   background-color: #2b2213;
    transition: all 0.3s ease;
 }
 
@@ -1287,44 +1286,43 @@ h6 {
 .burger-line:nth-child(3) {
    bottom: 5px;
    transform: translateY(10px);
-   }
+}
 
-   .burger._active{
-      position: absolute;
-      top: 33px;
-      right: 60px;
-   }
+.burger._active {
+   position: absolute;
+   top: 33px;
+   right: 60px;
+}
 
-   .burger._active .burger-line:nth-child(1){
-      transform: rotate(45deg);
-      background-color:#2B2213;
-   }
+.burger._active .burger-line:nth-child(1) {
+   transform: rotate(45deg);
+   background-color: #2b2213;
+}
 
-   .burger._active .burger-line:nth-child(2){
-      opacity: 0;
-   }
+.burger._active .burger-line:nth-child(2) {
+   opacity: 0;
+}
 
-   .burger._active .burger-line:nth-child(3){
-      transform: rotate(-45deg);
-      background-color:#2B2213;
-   }
+.burger._active .burger-line:nth-child(3) {
+   transform: rotate(-45deg);
+   background-color: #2b2213;
+}
 
-   .full-screen__nav-log{
-      display: none;
-   }
+.full-screen__nav-log {
+   display: none;
+}
 
-   .full-screen__nav-contacts{
-      display: none;
-   }
+.full-screen__nav-contacts {
+   display: none;
+}
 
-   .nav__txt{
-      display: none;
-   }
+.nav__txt {
+   display: none;
+}
 
-   .nav__logo-image{
-      display: none;
-   }
-
+.nav__logo-image {
+   display: none;
+}
 
 @media screen and (max-width: 1300px) {
    .container {
@@ -1647,11 +1645,11 @@ h6 {
       z-index: 1;
    }
 
-   .full-screen__info._active{
+   .full-screen__info._active {
       right: -40%;
    }
 
-   .burger{
+   .burger {
       position: absolute;
       top: 33px;
       right: 60px;
@@ -1659,12 +1657,12 @@ h6 {
       z-index: 5;
    }
 
-   .full-screen__services{
+   .full-screen__services {
       flex-direction: column;
    }
 
-   .full-screen__services a{
-      color: #2A2213;
+   .full-screen__services a {
+      color: #2a2213;
       font-size: 24px;
       line-height: 32px;
       font-weight: 500;
@@ -1672,7 +1670,7 @@ h6 {
       padding: 0px 0px 15px 0px;
    }
 
-   .full-screen__services .full-screen__nav-log{
+   .full-screen__services .full-screen__nav-log {
       display: block;
       position: absolute;
       top: 35px;
@@ -1680,7 +1678,7 @@ h6 {
       font-size: 18px;
       line-height: 21px;
       font-weight: 700;
-      color: #F89D13;
+      color: #f89d13;
       text-transform: none;
    }
 
@@ -1688,23 +1686,23 @@ h6 {
       right: 60px;
    }
 
-   .nav__tel{
+   .nav__tel {
       margin: 0;
       font-size: 24px;
       line-height: 32px;
       font-weight: 900;
-      color: #F89D13;
+      color: #f89d13;
       padding: 0px 0px 3px 0px;
    }
 
-   .full-screen__nav-contacts{
+   .full-screen__nav-contacts {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       padding: 72px 0px 0px 0px;
    }
 
-   .full-screen__nav-contacts .nav-address{
+   .full-screen__nav-contacts .nav-address {
       font-size: 18px;
       font-weight: 400;
       line-height: 24px;
@@ -1713,17 +1711,21 @@ h6 {
       padding: 0px 0px 40px 0px;
    }
 
-   .nav__txt{
+   .full-screen__services li:nth-child(3) {
+      margin: 0;
+   }
+
+   .nav__txt {
       display: block;
       font-weight: 400;
       font-size: 12px;
       line-height: 16px;
-      color: #2B2213;
+      color: #2b2213;
       opacity: 0.8;
       padding: 0px 0px 9px 0px;
    }
 
-   .nav__logo-image{
+   .nav__logo-image {
       display: block;
    }
 
@@ -1740,12 +1742,12 @@ h6 {
       background-color: rgba(0, 0, 0, 0.5);
    }
 
-   .full-screen__logo{
+   .full-screen__logo {
       padding: 0px 0px 0px 60px;
       z-index: 5;
    }
 
-   .full-screen__row{
+   .full-screen__row {
       width: 768px;
       display: flex;
       justify-content: flex-start;
@@ -1756,14 +1758,14 @@ h6 {
       width: 100%;
    }
 
-   .full-screen__bell{
+   .full-screen__bell {
       z-index: 0;
    }
 
-   .full-screen__tel{
+   .full-screen__tel {
       font-size: 30px;
       line-height: 40px;
-      color: #F89D13;
+      color: #f89d13;
       margin: 0px 0px 0px 50px;
    }
 
@@ -2077,6 +2079,13 @@ h6 {
       padding: 0;
    }
 
+   .feedback__form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
    .feedback__title {
       font-size: 36px;
       line-height: 44px;
@@ -2227,7 +2236,7 @@ h6 {
       align-items: flex-start;
    }
 
-   .full-screen__menu{
+   .full-screen__menu {
       z-index: 10;
    }
 
@@ -2273,72 +2282,72 @@ h6 {
       overflow: auto;
    }
 
-   .full-screen__info._active{
+   .full-screen__info._active {
       display: block;
       position: fixed;
       right: -43%;
    }
 
-   .full-screen__services .full-screen__nav-log{
+   .full-screen__services .full-screen__nav-log {
       position: absolute;
       top: 30px;
       left: 20px;
       font-size: 18px;
       line-height: 21px;
       font-weight: 700;
-      color: #F89D13;
+      color: #f89d13;
       text-transform: none;
    }
 
-   .full-screen__services a{
-      color: #2A2213;
+   .full-screen__services a {
+      color: #2a2213;
       font-size: 24px;
       line-height: 32px;
       font-weight: 500;
       text-align: center;
    }
 
-   .full-screen__services a:nth-child(2){
+   .full-screen__services a:nth-child(2) {
       padding: 15px 0px;
    }
 
-   .nav__tel{
+   .nav__tel {
       margin: 0;
       font-size: 24px;
       line-height: 32px;
       font-weight: 900;
-      color: #F89D13;
+      color: #f89d13;
       padding: 0px 0px 3px 0px;
    }
 
-   .full-screen__nav-contacts .nav-address{
+   .full-screen__nav-contacts .nav-address {
       font-size: 12px;
       line-height: 16px;
       font-weight: 400;
    }
 
-   .full-screen__nav-contacts{
+   .full-screen__nav-contacts {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       padding: 72px 0px 0px 0px;
    }
 
-   .nav__txt{
+   .nav__txt {
       display: block;
       font-weight: 400;
       font-size: 12px;
       line-height: 16px;
-      color: #2B2213;
+      color: #2b2213;
       opacity: 0.8;
       padding: 0px 0px 9px 0px;
    }
 
-   .nav__logo-image{
+   .nav__logo-image {
       display: block;
    }
 
-   .full-screen__services li{
+   .full-screen__services li {
       z-index: 10;
    }
 
@@ -2354,9 +2363,9 @@ h6 {
       right: 20px;
    }
 
-   .burger-line{
+   .burger-line {
       display: block;
-      background-color:#fff;
+      background-color: #fff;
    }
 
    .full-screen__logo {
@@ -2844,5 +2853,4 @@ h6 {
    .footer__txt:last-child {
       margin: 0px 0px 40px 0px;
    }
-
 }
