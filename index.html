@@ -563,16 +563,18 @@
                      </div>
                   </div>
                </div>
-               <div class="main__feedback">
+               <div id="all-form"class="main__feedback">
                   <div class="feedback__row">
                      <div class="feedback__info-row">
                         <div class="feedback__title">Остались вопросы ?</div>
                         <div class="feedback__text">Закажите звонок и наш менеджер свяжется <br> с вами в ближайшее
                            время
                         </div>
-                        <input type="text" class="feedback__name" name="name" placeholder="Ваше имя">
-                        <input type="text" class="feedback__tel tel" name="phone" placeholder="+7 (999) 343-32-15">
-                        <button class="feedback__btn btn">Заказать звонок</button>
+                        <form action="sandmail.php" id="form" method="POST" class="feedback__form">
+                           <input id="test" type="text" class="feedback__name req" name="username" placeholder="Ваше имя*">
+                           <input type="tel" class="feedback__tel tel req _tel" name="phone" placeholder="+7 (999) 343-32-15*">
+                        <button class="feedback__btn btn" type="submit">Заказать звонок</button>
+                     </form>
                      </div>
                      <div class="feedback__img">
                         <img src="img/feedback.png" alt="feedback.png" class="feedback__image">

@@ -153,17 +153,12 @@ h6 {
       line-height: 21px;
       color: #2a2213;
       display: flex;
-      margin: 0px 30px 0px 0px;
       transition: all 0.3s ease;
    }
 
    &__nav:hover {
       opacity: 0.6;
       transition: all 0.3s ease;
-   }
-
-   &__nav:last-child {
-      margin: 0;
    }
 
    &__info {
@@ -216,6 +211,10 @@ h6 {
       height: 100%;
       object-fit: cover;
    }
+}
+
+.full-screen__services li:nth-child(3) {
+   margin: 0px 45px;
 }
 
 .logo {
@@ -1041,6 +1040,25 @@ h6 {
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
+   }
+
+   &__feedback::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      background: rgba(51, 51, 51, 0.9) url('../img/icons/loading.webp') center / 50px no-repeat;
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   &__feedback._sending::after{
+      opacity: 1;
+      visibility: visible;
    }
 }
 .feedback {
@@ -1078,16 +1096,27 @@ h6 {
       padding: 15px 20px;
       margin: 0px 0px 10px 0px;
       background-color: #f5f5f5;
-      border: 0.5px solid rgba(43, 34, 19, 0.8);
+      border: none;
       border-radius: 3px;
    }
+
+   &__name._error {
+      background-color: rgba(250, 25, 25, 0.04);
+      border: 0.5px solid #FF2323;
+   }
+
+   &__tel._error{
+      background-color: rgba(250, 25, 25, 0.04);
+      border: 0.5px solid #FF2323;
+   }
+
 
    &__tel {
       width: 430px;
       height: 50px;
       padding: 0px 0px 18px 0px;
       background-color: #f5f5f5;
-      border: 0.5px solid rgba(43, 34, 19, 0.8);
+      border: none;
       border-radius: 3px;
       padding: 15px 20px;
    }

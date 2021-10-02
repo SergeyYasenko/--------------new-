@@ -1,3 +1,4 @@
+// маска для телефона
 var element = document.querySelector('.tel');
 var maskOptions = {
    mask: '+7 (000) 000-00-00',
@@ -13,6 +14,8 @@ var maskOptions = {
 };
 
 var mask = new IMask(element, maskOptions);
+
+// ТАБЫ
 
 document.querySelectorAll('.transportation__title').forEach((item) =>
    item.addEventListener('click', function (e) {
@@ -31,7 +34,7 @@ document.querySelectorAll('.transportation__title').forEach((item) =>
 
 document.querySelector('.transportation__title').click();
 
-
+// СЧЕТЧИК
 
 document.addEventListener('DOMContentLoaded', () => {
    const newYear = new Date('Oct 18 2021 00:00:00');
@@ -72,6 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
    setInterval(timeCount, 1000);
 });
 
+// SLICK CLIDER
+
 $(document).ready(function () {
    $('.main__slider').slick({
       dots: true,
@@ -84,6 +89,8 @@ $(document).ready(function () {
    });
 });
 
+
+// ACCORDION
 
 $(document).ready(function () {
    $('.accordion-right__block-title').click(function (_event) {
@@ -104,6 +111,8 @@ $(document).ready(function () {
       $(this).toggleClass('active').next().slideToggle(300);
    });
 });
+
+// ПЛАВНЫЙ ПЕРЕХОД ПО ЯКОРНЫМ ССЫЛКАМ
 
 const menuLinks = document.querySelectorAll('.nav[data-goto]');
 if (menuLinks.length > 0) {
@@ -132,6 +141,8 @@ if (menuLinks.length > 0) {
    }
 }
 
+// ГАМБУРГЕР
+
 const fullScreenInfoRow = document.querySelector('.full-screen__info-row');
 const fullScreenInfo = document.querySelector('.full-screen__info');
 const iconMenu = document.querySelector('.burger');
@@ -143,3 +154,60 @@ if (iconMenu) {
       fullScreenInfo.classList.toggle('_active');
    });
 }
+
+// ПОДКЛЮЧЕНИЕ ОБРАТНОЙ СВЯЗИ
+
+document.addEventListener('DOMContentLoaded', function () {
+   const form = document.getElementById('form');
+   const allForm = document.getElementById('all-form');
+   form.addEventListener('submit', formSend);
+
+   async function formSend(e) {
+      e.preventDefault();
+
+      let error = formValidate(form);
+
+      if (error === 0) {
+         allForm.classList.add('_sending');
+         let response = await fetch ('sendmail.php', {
+            method: 'POST',
+            body: formData
+         });
+         if (response.ok) {
+            let result = await response.json();
+            formPreview.innerHTML = '';
+            form.reset();
+            form.classList.remove('_sending');
+         }else{
+         alert('Ошибка');
+         form.classList.remove('_sending');
+         }
+      } else {
+         alert('Заполните обязательные поля');
+      }
+   }
+
+   function formValidate(form) {
+      let error = 0;
+      let formReq = document.querySelectorAll('.req');
+
+      for (let index = 0; index < formReq.length; index++) {
+         const input = formReq[index];
+         formRemoveError(input);
+
+         if (input.value === '') {
+            formAddError(input);
+            error++;
+         }
+
+      }
+      function formAddError(input) {
+         input.parentElement.classList.add('_error');
+         input.classList.add('_error');
+      }
+      function formRemoveError(input) {
+         input.parentElement.classList.remove('_error');
+         input.classList.remove('_error');
+      }
+   }
+});
