@@ -125,8 +125,8 @@
                                     <h2 class="card-block__text">Доставка мелких и крупных партий и крупногабаритного
                                        товара в
                                        Wildberries, Ozon, Яндекс.Маркет, Яндекс.Маркет, СберМегаМаркет и другие</h2>
-                                    </div>
-                                    <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
+                                 </div>
+                                 <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
                               </div>
                               <div class="card-block__card">
                                  <img src="img/sale_3.png" alt="sale_1.png" class="card__item">
@@ -139,7 +139,7 @@
                                        оборудования,
                                     </h2>
                                  </div>
-                                    <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
+                                 <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
                               </div>
                            </div>
                         </div>
@@ -156,8 +156,8 @@
                                        во
                                        время
                                        перевозки</h2>
-                                    </div>
-                                    <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
+                                 </div>
+                                 <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
                               </div>
                               <div class="card-block__card">
                                  <img src="img/russia_2.png" alt="russia_2.png" class="card__item">
@@ -166,8 +166,8 @@
                                     <h2 class="card-block__text">Безопасноя транспортировка крупных партий товаров на
                                        любые
                                        расстояния</h2>
-                                    </div>
-                                    <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
+                                 </div>
+                                 <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
                               </div>
                               <div class="card-block__card">
                                  <img src="img/russia_3.png" alt="russia_3.png" class="card__item">
@@ -176,7 +176,7 @@
                                     <h2 class="card-block__text">Перевозка автоцистернами сахара, зерна, пластика
                                     </h2>
                                  </div>
-                                    <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
+                                 <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
                               </div>
                            </div>
                         </div>
@@ -191,8 +191,8 @@
                                     <h2 class="card-block__text">Перевозка комбайнов, экскаваторов, автокранов,
                                        бульдозеров,
                                        катков, тракторов</h2>
-                                    </div>
-                                    <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
+                                 </div>
+                                 <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
                               </div>
                               <div class="card-block__card">
                                  <img src="img/auto_2.png" alt="auto_2.png" class="card__item">
@@ -200,8 +200,8 @@
                                     <h1 class="card-block__title">Перевозка конструкций</h1>
                                     <h2 class="card-block__text">Перевозка крупногабаритных металлических, бетонных
                                        конструкций</h2>
-                                    </div>
-                                    <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
+                                 </div>
+                                 <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
                               </div>
                               <div class="card-block__card">
                                  <img src="img/auto_3.png" alt="auto_3.png" class="card__item">
@@ -210,8 +210,8 @@
                                     <h2 class="card-block__text">Перевозка промышленного, производственного
                                        оборудования
                                        и станков, асфальтобетонных заводов (АБЗ)</h2>
-                                    </div>
-                                    <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
+                                 </div>
+                                 <button data-goto=".feedback__row" class="card-block__btn btn nav">Заказать</button>
                               </div>
                            </div>
                         </div>
@@ -574,7 +574,16 @@
                         <div class="feedback__text">Закажите звонок и наш менеджер свяжется <br> с вами в ближайшее
                            время
                         </div>
+
                         <form action="sandmail.php" id="form" method="POST" class="feedback__form">
+                           <!--Hidden Required Fields-->
+                           <input type="hidden" name="project_name" value="http://ruscargotrans.ru/">
+                           <input type="hidden" name="admin_email" value="krogan98@mail.ru">
+                           <input type="hidden" name="project_name" value="Заявка с формы обратной связи">
+                           <!--END Hidden Required Fields-->
+
+
+
                            <input id="test" type="text" class="feedback__name req" name="username"
                               placeholder="Ваше имя*">
                            <input type="tel" class="feedback__tel tel req _tel" name="phone"
