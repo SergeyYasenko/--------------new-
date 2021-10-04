@@ -1964,6 +1964,9 @@ h6 {
   .full-screen__services li:nth-child(3) {
     margin: 0;
   }
+  .full-screen__services a {
+    text-transform: none;
+  }
   .nav__txt {
     display: block;
     font-weight: 400;
@@ -2134,7 +2137,7 @@ h6 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: url(../img/icons/arrow-3.svg) 50% 60% no-repeat, url(../img/icons/Arrow-3.svg) 50% 25% no-repeat;
+    background: url(../img/icons/arrow-3.svg) 50% 60% no-repeat, url(../img/icons/arrow-3.svg) 50% 25% no-repeat;
   }
   .block__container {
     width: 100%;
@@ -2534,6 +2537,7 @@ h6 {
     line-height: 32px;
     font-weight: 500;
     text-align: center;
+    text-transform: none;
   }
   .full-screen__services a:nth-child(2) {
     padding: 15px 0px;
@@ -2698,7 +2702,7 @@ h6 {
     font-size: 14px;
     line-height: 17px;
     padding: 12px 76px;
-    margin: 0px 0px 23px 0px;
+    margin: 0px 27px 23px 27px;
   }
   .benefits__row {
     max-width: 320px;
@@ -2814,6 +2818,7 @@ h6 {
     object-fit: cover;
     width: 268px;
     height: 152px;
+    margin: 0px 0px 18px 0px;
   }
   .slider__title {
     font-size: 24px;
