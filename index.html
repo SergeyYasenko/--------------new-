@@ -52,7 +52,7 @@
                               </li>
                            </ul>
                            <div class="full-screen__nav-contacts">
-                              <span><a href="tel+78005232432" class="nav__tel phone">8 (800) 523-24-32</a></span>
+                              <span><a href="tel+78005232432" class="nav__tel phone">8 (926) 883-09-39</a></span>
                               <span class="nav-address">Москва, ул. Темерницкая, д38</span>
                            </div>
                            <p class="nav__txt">©️2021 Все права защищены </p>
@@ -76,9 +76,8 @@
                по России, СНГ, Европе</h1>
             <div class="contact">
                <div class="contact__row">
-                  <div class="contact__title">Доставим ваш груз в любую точку России точно в срок</div>
-                  <input type="text" class="contact__tel tel" name="phone" placeholder="+7 (999) 343-32-15">
-                  <button data-goto=".feedback__row" class="contact__btn btn nav">Заказать звонок</button>
+                  <div class="contact__title">Доставим ваш груз в любую точку <br> России точно в срок</div>
+                  <button data-goto=".feedback__row" href="#" class="contact__btn btn nav">Заказать звонок</button>
                   <p class="contact__text">Нажимая на кнопку, вы даете согласие на обработку персональных данных</p>
                </div>
             </div>
@@ -313,6 +312,11 @@
                            <div class="time-count__item time-count__minutes">
                               <div class="time-count__val">00</div>
                               <span class="time-count__text">Минут</span>
+                           </div>
+                           <div class="time-count__separator time-count__val">:</div>
+                           <div class="time-count__item time-count__seconds">
+                              <div class="time-count__val">00</div>
+                              <span class="time-count__text">секунд</span>
                            </div>
                         </div>
                      </div>
@@ -575,19 +579,19 @@
                            время
                         </div>
 
-                        <form action="sandmail.php" id="form" method="POST" class="feedback__form">
-                           <!--Hidden Required Fields-->
-                           <input type="hidden" name="project_name" value="http://ruscargotrans.ru/">
-                           <input type="hidden" name="admin_email" value="krogan98@mail.ru">
-                           <input type="hidden" name="project_name" value="Заявка с формы обратной связи">
-                           <!--END Hidden Required Fields-->
+                        <form action="mail.php" id="form" method="POST" enctype="multipart/form-data"
+                           class="feedback__form">
+                           <!-- Hidden Required Fields-->
+                           <input type="hidden" name="admin_email[]" value="info@ruscargotrans.ru">
+                           <input type="hidden" name="form_subject" value="Заявка с нижней формы обратной связи">
+                           <!--END Hidden Required Fields -->
 
 
 
-                           <input id="test" type="text" class="feedback__name req" name="username"
-                              placeholder="Ваше имя*">
-                           <input type="tel" class="feedback__tel tel req _tel" name="phone"
-                              placeholder="+7 (999) 343-32-15*">
+                           <input id="test" type="text" class="feedback__name req" name="Имя" placeholder="Ваше имя*"
+                              data-validate-field="name">
+                           <input type="tel" class="feedback__tel tel req _tel" name="Телефон"
+                              placeholder="+7 (999) 343-32-15*" data-validate-field="tel">
                            <button class="feedback__btn btn" type="submit">Заказать звонок</button>
                         </form>
                      </div>
@@ -635,6 +639,7 @@
       </footer>
    </div>
    </div>
+   <script src="js/just-validate.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="https://unpkg.com/imask"></script>
    <script src="js/main.js"></script>

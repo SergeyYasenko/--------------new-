@@ -1,94 +1,4 @@
-* {
-   padding: 0;
-   margin: 0;
-   border: 0;
-}
-
-*,
-*::before,
-*::after {
-   -moz-box-sizing: border-box;
-   -webkit-box-sizing: border-box;
-   box-sizing: border-box;
-}
-
-:focus:active {
-   outline: none;
-}
-a:focus,
-a:active {
-   outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-   display: block;
-}
-
-html,
-body {
-   height: 100%;
-   width: 100%;
-   font-size: 100%;
-   line-height: 1;
-   font-size: 18px;
-   color: #fff;
-   font-family: "Roboto", sans-serif;
-   -ms-text-size-adjust: 100%;
-   -moz-text-size-adjust: 100%;
-   -webkit-text-size-adjust: 100%;
-}
-
-body._lock {
-   overflow: hidden;
-}
-
-input,
-button,
-textarea {
-   font-family: inherit;
-}
-
-input::-ms-clear {
-   display: none;
-}
-
-input {
-   outline: none;
-}
-
-button {
-   cursor: pointer;
-}
-button::-moz-focus-inner {
-   padding: 0;
-   border: 0;
-}
-a,
-a:visited {
-   text-decoration: none;
-}
-a:hover {
-   text-decoration: none;
-}
-ul li {
-   list-style: none;
-}
-img {
-   vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-size: inherit;
-   font-weight: 400;
-}
+@import "nullstyle.scss";
 
 .wrapper {
    min-height: 100vh;
@@ -251,18 +161,18 @@ h6 {
 
    &__row {
       width: 465px;
-      height: 333px;
+      height: 250px;
       border-radius: 5px;
       background: rgba(177, 177, 177, 0.2);
       backdrop-filter: blur(4px);
       display: flex;
       align-items: center;
       flex-direction: column;
-      padding: 43px 60px 0px 60px;
+      padding: 25px 20px 0px 20px;
    }
 
    &__title {
-      width: 421px;
+      width: 313px;
       font-size: 18px;
       font-weight: 500;
       line-height: 22px;
@@ -1103,16 +1013,7 @@ h6 {
       background-color: #f5f5f5;
       border: none;
       border-radius: 3px;
-   }
-
-   &__name._error {
-      background-color: rgba(250, 25, 25, 0.04);
-      border: 0.5px solid #ff2323;
-   }
-
-   &__tel._error {
-      background-color: rgba(250, 25, 25, 0.04);
-      border: 0.5px solid #ff2323;
+      order: 2;
    }
 
    &__tel {
@@ -1123,12 +1024,100 @@ h6 {
       border: none;
       border-radius: 3px;
       padding: 15px 20px;
+      order: 4;
    }
 
    &__btn {
       width: 430px;
       height: 55px;
+      order: 5;
    }
+
+   &__form{
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+.popup {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.8);
+   top: 0;
+   left: 0;
+   z-index: 30;
+   opacity: 0;
+   visibility: hidden;
+
+
+
+   &__body {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 10px;
+   }
+
+   &__content {
+      background-color:#fff;
+      color: #000;
+      max-width: 800px;
+      padding: 30px;
+      position: relative;
+   }
+
+   &__close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+   }
+
+   &__title {
+      font-size: 40px;
+      margin: 0px 0px 1em 0px;
+   }
+
+   &__text {
+      font-size: 30px;
+      margin: 0px 0px 1em 0px;
+   }
+}
+
+
+.js-validate-error-field{
+   background: rgba(250, 25, 25, 0.04);
+   border: 0.5px solid #FF2323;
+}
+
+.js-validate-error-label:nth-child(2){
+   visibility: collapse;
+   order: 1;
+}
+
+.js-validate-error-label:nth-child(4){
+   visibility: collapse;
+   order: 1;
+}
+
+.js-validate-error-label {
+   font-size: 14px;
+   font-weight: 400;
+   display: flex;
+   justify-content: end;
+   visibility: collapse;
+   margin: 0px 72px 0px 0px;
+   order: 3;
+}
+
+.js-validate-error-label::after{
+   content: "Заполните полe*";
+   visibility: visible;
+   display: block;
 }
 
 .footer {
@@ -1939,9 +1928,10 @@ h6 {
    }
 
    .time-count__content {
-      width: 293px;
+      width: 350px;
       height: 100px;
       margin: 0 auto;
+      flex: 1 1 auto;
    }
 
    .time-count__val {
@@ -2127,6 +2117,10 @@ h6 {
       height: 50px;
       padding: 15px 30px;
       margin: 0px 0px 78px 0px;
+   }
+
+   .js-validate-error-label {
+      margin: 0px 0px 0px 340px;
    }
 
    .footer {
@@ -2594,7 +2588,7 @@ h6 {
    }
 
    .time-count__content {
-      width: 223px;
+      width: 290px;
       height: 60px;
       margin: 0 auto;
       padding: 10px 26px 5px 26px;
@@ -2795,6 +2789,10 @@ h6 {
       width: 279px;
    }
 
+   .js-validate-error-label {
+      margin: 0px 0px 0px 50px;
+   }
+
    .footer {
       min-width: 320px;
    }
@@ -2821,35 +2819,39 @@ h6 {
       margin: 0px 0px 3px 0px;
    }
 
+   .footer__contacts {
+      margin: 0px 0px 20px 0px;
+
    .address {
       font-size: 12px;
       line-height: 16px;
       margin: 0px 0px 49px 0px;
+      display: none;
    }
 
    .footer__nav {
       width: 100%;
       font-size: 16px;
       line-height: 32px;
-      margin: 0px 20px 108px 0px;
+      margin: 0px 20px 56px 0px;
    }
 
    .footer__img:nth-child(1) {
-      bottom: 20%;
+      bottom: 25%;
       right: 58%;
       width: 39px;
       height: 39px;
    }
 
    .footer__img:nth-child(2) {
-      bottom: 20%;
+      bottom: 25%;
       right: 45%;
       width: 39px;
       height: 39px;
    }
 
    .footer__img:nth-child(3) {
-      bottom: 20%;
+      bottom: 25%;
       right: 32%;
       width: 39px;
       height: 39px;

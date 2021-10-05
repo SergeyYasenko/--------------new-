@@ -1,12 +1,4 @@
 // маска для телефона
-var element = document.querySelector('.tel');
-var maskOptions = {
-   mask: '+7 (000) 000-00-00',
-   lazy: true,
-};
-
-var mask = new IMask(element, maskOptions);
-
 var element = document.querySelector('.feedback__tel');
 var maskOptions = {
    mask: '+7 (000) 000-00-00',
@@ -37,42 +29,45 @@ document.querySelector('.transportation__title').click();
 // СЧЕТЧИК
 
 document.addEventListener('DOMContentLoaded', () => {
-   const newYear = new Date('Oct 18 2021 00:00:00');
+	const newYear = new Date('Jan 1 2022 00:00:00');
+	
+	const daysVal = document.querySelector('.time-count__days .time-count__val');
+	const hoursVal = document.querySelector('.time-count__hours .time-count__val');
+	const minutesVal = document.querySelector('.time-count__minutes .time-count__val');
+	const secondsVal = document.querySelector('.time-count__seconds .time-count__val');
 
-   const daysVal = document.querySelector('.time-count__days .time-count__val');
-   const hoursVal = document.querySelector('.time-count__hours .time-count__val');
-   const minutesVal = document.querySelector('.time-count__minutes .time-count__val');
+	const daysText = document.querySelector('.time-count__days .time-count__text');
+	const hoursText = document.querySelector('.time-count__hours .time-count__text');
+	const minutesText = document.querySelector('.time-count__minutes .time-count__text');
+	const secondsText = document.querySelector('.time-count__seconds .time-count__text');
 
-   const daysText = document.querySelector('.time-count__days .time-count__text');
-   const hoursText = document.querySelector('.time-count__hours .time-count__text');
-   const minutesText = document.querySelector('.time-count__minutes .time-count__text');
+	function declOfNum(number, titles) {  
+		let cases = [2, 0, 1, 1, 1, 2];  
+		return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];  
+	}
 
-   function declOfNum(number, titles) {
-      let cases = [2, 0, 1, 1, 1, 2];
-      return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
-   }
+	const timeCount = () => {
+		let now = new Date();
+		let leftUntil = newYear - now;
+		
+		let days = Math.floor(leftUntil / 1000 / 60 / 60 / 24);
+		let hours = Math.floor(leftUntil / 1000 / 60 / 60) % 24;
+		let minutes = Math.floor(leftUntil / 1000 / 60) % 60;
+		let seconds = Math.floor(leftUntil / 1000) % 60;
 
-   const timeCount = () => {
-      let now = new Date();
-      let leftUntil = newYear - now;
+		daysVal.textContent = days;
+		hoursVal.textContent =	hours;
+		minutesVal.textContent = minutes;
+		secondsVal.textContent = seconds;
 
-      let days = Math.floor(leftUntil / 1000 / 60 / 60 / 24);
-      let hours = Math.floor(leftUntil / 1000 / 60 / 60) % 24;
-      let minutes = Math.floor(leftUntil / 1000 / 60) % 60;
+		daysText.textContent = declOfNum(days, ['день', 'дня', 'дней']);
+		hoursText.textContent = declOfNum(hours, ['час', 'часа', 'часов']);
+		minutesText.textContent = declOfNum(minutes, ['минута', 'минуты', 'минут']);
+		secondsText.textContent = declOfNum(seconds, ['секунда', 'секунды', 'секунд']);
+	};
 
-
-      daysVal.textContent = days;
-      hoursVal.textContent = hours;
-      minutesVal.textContent = minutes;
-
-
-      daysText.textContent = declOfNum(days, ['день', 'дня', 'дней']);
-      hoursText.textContent = declOfNum(hours, ['час', 'часа', 'часов']);
-      minutesText.textContent = declOfNum(minutes, ['минута', 'минуты', 'минут']);
-   };
-
-   timeCount();
-   setInterval(timeCount, 1000);
+	timeCount();
+	setInterval(timeCount, 1000);
 });
 
 // SLICK CLIDER
@@ -157,60 +152,29 @@ if (iconMenu) {
 
 // ПОДКЛЮЧЕНИЕ ОБРАТНОЙ СВЯЗИ
 
-document.addEventListener('DOMContentLoaded', function () {
-   const form = document.getElementById('form');
-   const allForm = document.getElementById('all-form');
-   form.addEventListener('submit', formSend);
+let validateForms = function(selector, rules, successModal, yaGoal) {
+	new window.JustValidate(selector, {
+		rules: rules,
+		submitHandler: function(form) {
+			let formData = new FormData(form);
 
-   async function formSend(e) {
-      e.preventDefault();
+			let xhr = new XMLHttpRequest();
 
-      let error = formValidate(form);
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === 4) {
+					if (xhr.status === 200) {
+						console.log('Отправлено');
+                  alert('Заявка отправлена! Спасибо что выбрали нас!!!')
+					}
+				}
+			}
 
-   }
+			xhr.open('POST', 'mail.php', true);
+			xhr.send(formData);
 
-   function formValidate(form) {
-      let error = 0;
-      let formReq = document.querySelectorAll('.req');
-
-      for (let index = 0; index < formReq.length; index++) {
-         const input = formReq[index];
-         formRemoveError(input);
-
-         if (input.value === '') {
-            formAddError(input);
-            error++;
-         }
-
+			form.reset();
       }
-      function formAddError(input) {
-         input.parentElement.classList.add('_error');
-         input.classList.add('_error');
-      }
-      function formRemoveError(input) {
-         input.parentElement.classList.remove('_error');
-         input.classList.remove('_error');
-      }
-   }
-});
-
-$(document).ready(function () {
-
-   //E-mail Ajax Send
-   $("form").submit(function () { //Change
-      var th = $(this);
-      $.ajax({
-         type: "POST",
-         url: "mail.php", //Change
-         data: th.serialize()
-      }).done(function () {
-         alert("Thank you!");
-         setTimeout(function () {
-            // Done Functions
-            th.trigger("reset");
-         }, 1000);
-      });
-      return false;
    });
+}
 
-});
+validateForms('.feedback__form', { name: {required: true}, tel: {required: true} }, 'thanks-popup', 'send goal');
