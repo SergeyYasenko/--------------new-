@@ -1,5 +1,5 @@
 //Обнуление
-@import "nullstyle.scss";
+@import "nullstyle";
 
 .wrapper {
    min-height: 100vh;
@@ -52,10 +52,11 @@
    }
 
    &__row {
-      max-width: 1290px;
+      max-width: 1320px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 0px 15px 0px 15px;
    }
 
    &__nav {
@@ -132,7 +133,6 @@
    font-size: 24px;
    font-weight: 700;
    line-height: 28px;
-   color: #2a2213;
 }
 
 .phone {
@@ -958,24 +958,6 @@
       align-items: center;
       position: relative;
    }
-
-   &__feedback::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(51, 51, 51, 0.9) url("../img/icons/loading.webp") center / 50px no-repeat;
-      transition: all 0.3s ease;
-      opacity: 0;
-      visibility: hidden;
-   }
-
-   &__feedback._sending::after {
-      opacity: 1;
-      visibility: visible;
-   }
 }
 .feedback {
    &__row {
@@ -1034,7 +1016,7 @@
       order: 5;
    }
 
-   &__form{
+   &__form {
       display: flex;
       flex-direction: column;
    }
@@ -1051,8 +1033,6 @@
    opacity: 0;
    visibility: hidden;
 
-
-
    &__body {
       min-height: 100%;
       display: flex;
@@ -1062,7 +1042,7 @@
    }
 
    &__content {
-      background-color:#fff;
+      background-color: #fff;
       color: #000;
       max-width: 800px;
       padding: 30px;
@@ -1089,18 +1069,18 @@
    }
 }
 
-
-.js-validate-error-field{
+.js-validate-error-field {
    background: rgba(250, 25, 25, 0.04);
-   border: 0.5px solid #FF2323;
+   border: 0.5px solid #ff2323;
 }
 
-.js-validate-error-label:nth-child(2){
+.js-validate-error-label::after {
+   content: "Заполните полe*";
    visibility: collapse;
    order: 1;
 }
 
-.js-validate-error-label:nth-child(4){
+.js-validate-error-label:nth-child(4) {
    visibility: collapse;
    order: 1;
 }
@@ -1115,7 +1095,7 @@
    order: 3;
 }
 
-.js-validate-error-label::after{
+.js-validate-error-label::after {
    content: "Заполните полe*";
    visibility: visible;
    display: block;
@@ -1325,7 +1305,7 @@
    }
 
    .full-screen__row {
-      max-width: 1140px;
+      max-width: 1170px;
    }
 
    .full-screen__navigation-head {
@@ -1602,6 +1582,13 @@
    }
 }
 
+@media screen and (max-width: 1299px) {
+   .card-block__btn {
+      padding: 14px 20px;
+      width: auto;
+   }
+}
+
 @media screen and (max-width: 1139px) {
    .container {
       width: 768px;
@@ -1628,7 +1615,7 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.6);
-      transition: left 0.6s ease;
+      transition: left 0.3s ease;
       overflow: auto;
       z-index: 1;
    }
@@ -2079,7 +2066,7 @@
       padding: 0;
    }
 
-   .feedback__form{
+   .feedback__form {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -2223,7 +2210,7 @@
    .container {
       max-width: 100%;
       width: 100%;
-      padding: 0 15px;
+      padding: 0 20px;
    }
 
    .full-screen__navigation-head {
@@ -2262,7 +2249,7 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.6);
-      transition: transform 0.6s ease;
+      transition: transform 0.2s ease;
       overflow: auto;
       z-index: 1;
    }
@@ -2284,6 +2271,8 @@
       margin: 0px 79px;
       background-color: #fff;
       overflow: auto;
+      transition: right 0.2s ease;
+
    }
 
    .full-screen__info._active {
@@ -2449,7 +2438,7 @@
    }
 
    .transportation__title {
-      width: 280px;
+      width: 100%;
       padding: 17px 15px;
       font-size: 14px;
       line-height: 17px;
@@ -2465,11 +2454,13 @@
    }
 
    .card__item {
-      width: 280px;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
    }
 
    .card-block__card {
-      width: 280px;
+      width: 100%;
       margin: 0px 0px 40px 0px;
       flex: 1 1 auto;
    }
@@ -2481,15 +2472,15 @@
    .main__card-block {
       flex-wrap: wrap;
       align-items: center;
-      width: 280px;
+      width: 100%;
    }
 
    .card-block__btn {
-      width: 226px;
+      width: 100%;
       font-size: 14px;
       line-height: 17px;
       padding: 12px 76px;
-      margin: 0px 27px 23px 27px;
+      margin: 0 0 23px 0;
    }
 
    .benefits__row {
@@ -2611,24 +2602,24 @@
    }
 
    .main__content-slider {
-      padding: 0px 0px 80px 0px;
+      padding: 0px 20px 80px 20px;
    }
 
    .main__slick-slider {
-      width: 268px;
+      width: 100%;
       margin: 0 auto;
    }
 
    .main__slider {
-      width: 268px;
+      width: 100%;
       height: 372px;
    }
 
    .img-slider {
       -o-object-fit: cover;
       object-fit: cover;
-      width: 268px;
-      height: 152px;
+      width: 50%;
+      height: 50%;
       margin: 0px 0px 18px 0px;
    }
 
@@ -2669,16 +2660,24 @@
    }
 
    .main__slider .slick-arrow.slick-next {
-      top: -30px;
+      top: -10%;
       right: 0;
       background: url(../img/icons/mobile-next.svg) 0 0 / 50% no-repeat;
    }
 
    .main__slider .slick-arrow.slick-prev {
-      top: -30px;
-      left: 190px;
+      top: -10%;
+      left: 85%;
       right: 0;
       background: url(../img/icons/mobile-prev.svg) 0 0 / 50% no-repeat;
+   }
+
+   .main__questions {
+      padding: 0px 20px;
+   }
+
+   .questions__row {
+      width: 100%;
    }
 
    .questions__title {
@@ -2689,13 +2688,19 @@
 
    .questions__accordion-left {
       padding: 0;
-      width: 280px;
+      width: 100%;
    }
 
    .accordion-left__block-title {
       margin: 0px 0px 20px 0px;
       padding: 15px 50px 15px 15px;
-      width: 280px;
+      width: 100%;
+   }
+
+   .accordion-left__block-title:before,
+   .accordion-left__block-title:after {
+      top: 25px;
+      right: 20px;
    }
 
    .accordion-left__text {
@@ -2706,23 +2711,23 @@
    }
 
    .accordion-left__block-text {
-      width: 280px;
+      width: 100%;
    }
 
    .questions__accordion-left {
       padding: 0;
-      width: 280px;
+      width: 100%;
    }
 
    .questions__accordion-left {
       padding: 0;
-      width: 280px;
+      width: 100%;
    }
 
    .accordion-right__block-title {
       margin: 0px 0px 20px 0px;
       padding: 15px 50px 15px 15px;
-      width: 280px;
+      width: 100%;
    }
 
    .accordion-right__text {
@@ -2733,19 +2738,30 @@
    }
 
    .accordion-right__block-text {
-      width: 280px;
+      width: 100%;
    }
 
    .questions__accordion-right {
       padding: 0;
-      width: 280px;
+      width: 100%;
+   }
+
+   .accordion-right__block-title:before,
+   .accordion-right__block-title:after {
+      top: 25px;
+      right: 20px;
+   }
+
+   .main__feedback {
+      padding: 0 20px;
    }
 
    .feedback__row {
-      min-width: 320px;
+      min-width: 100%;
    }
 
    .feedback__info-row {
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -2763,15 +2779,29 @@
       margin: 0px 0px 45px 0px;
    }
 
+   .feedback__form {
+      width: 100%;
+   }
+
+   .js-validate-error-label {
+      position: absolute;
+      right: 10px;
+      top: 15%;
+   }
+
+   .js-validate-error-label {
+      margin: 0;
+   }
+
    .feedback__name {
-      width: 280px;
+      width: 100%;
       height: 45px;
       padding: 14px 13px;
       margin: 0px 0px 10px 0px;
    }
 
    .tel {
-      width: 280px;
+      width: 100%;
       height: 45px;
       margin: 0px 0px 15px 0px;
       padding: 14px 13px;
@@ -2780,14 +2810,16 @@
    .feedback__btn {
       font-size: 16px;
       line-height: 20px;
-      width: 280px;
+      width: 100%;
       height: 50px;
       padding: 15px 30px;
       margin: 0px 0px 62px 0px;
    }
 
    .feedback__image {
-      width: 279px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
    }
 
    .js-validate-error-label {
@@ -2822,6 +2854,7 @@
 
    .footer__contacts {
       margin: 0px 0px 20px 0px;
+   }
 
    .address {
       font-size: 12px;
@@ -2866,5 +2899,57 @@
 
    .footer__txt:last-child {
       margin: 0px 0px 40px 0px;
+   }
+}
+
+@media screen and (max-width: 510px) {
+   .img-slider {
+      width: 100%;
+   }
+
+   .slider__info {
+      width: 100%;
+   }
+
+   .slider__description {
+      width: 100%;
+   }
+
+   .main__content-slider {
+      padding: 0px 20px 180px 20px;
+   }
+}
+
+@media screen and (max-width: 470px) {
+   .img-slider {
+      width: 100%;
+      height: 50%;
+      margin: 0px 0px 18px 0px;
+   }
+
+   .slider__description {
+      width: 100%;
+   }
+
+   .slider__info {
+      width: 100%;
+   }
+
+   .questions__title {
+      padding: 140px 0px 40px 0px;
+   }
+}
+
+@media screen and (max-width: 430px) {
+   .js-validate-error-label {
+      position: absolute;
+      right: 10px;
+      top: 19%;
+   }
+}
+
+@media screen and (max-width: 380px) {
+   .main__slider .slick-arrow.slick-prev {
+      left: 80%;
    }
 }
